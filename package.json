@@ -1,0 +1,25 @@
+{
+    "name": "@bestbeforetoday/react-kata",
+    "version": "1.0.0",
+    "author": "Mark S. Lewis",
+    "private": true,
+    "license": "Apache-2.0",
+    "description": "Reaction code kata",
+    "devDependencies": {
+        "@types/chai": "^4.1.7",
+        "@types/mocha": "^5.2.5",
+        "@types/node": "^10.12.18",
+        "chai": "^3.5.0",
+        "mocha": "^3.2.0",
+        "nyc": "^13.1.0",
+        "tslint": "^5.12.1",
+        "typescript": "^3.2.4"
+    },
+    "scripts": {
+        "build": "tsc && npm run lint",
+        "lint": "tslint --config tslint.json --project tsconfig.json",
+        "react": "node dist/cli.js",
+        "test": "npm run build && nyc npm run unit-test",
+        "unit-test": "mocha --recursive -- 'dist/**/*.test.js'"
+    }
+}
